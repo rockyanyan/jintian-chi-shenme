@@ -29,7 +29,9 @@
 
 ## 📱 安装
 
-把 `dist/今天吃什么.apk` 传到手机上直接安装即可（需允许安装未知来源应用）。支持 Android 5.0+。
+**直接下载**：[`jintian-chi-shenme-v1.0.apk`](https://github.com/rockyanyan/jintian-chi-shenme/releases/download/v1.0/jintian-chi-shenme-v1.0.apk) （在 [Releases](https://github.com/rockyanyan/jintian-chi-shenme/releases) 页也能找到）
+
+也可以把仓库里的 `dist/今天吃什么.apk` 传到手机上安装（需允许安装未知来源应用）。支持 Android 5.0+。
 
 ## 🛠 技术方案
 
