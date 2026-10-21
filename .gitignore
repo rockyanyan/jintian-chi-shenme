@@ -1,0 +1,9 @@
+# 构建产物 / 临时
+.build-work/
+.build/
+*.apk.idsig
+*.zip
+
+# 系统
+Thumbs.db
+.DS_Store

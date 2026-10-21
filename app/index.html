@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#FFF8F0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>今天吃什么</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ========== 首页：选食材 ========== -->
+<section class="screen active" id="screen-pick">
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-emoji">🍳</span>
+      <div>
+        <h1>今天吃什么</h1>
+        <p class="sub">选一下手边的食材，我来告诉你能做啥</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="searchbar">
+    <span class="s-ico">🔍</span>
+    <input id="ingSearch" type="search" placeholder="搜食材，比如：土豆" autocomplete="off">
+  </div>
+
+  <div class="picked-bar" id="pickedBar">
+    <span class="picked-label">已选 <b id="pickedCount">0</b> 样</span>
+    <div class="picked-list" id="pickedList"></div>
+    <button class="link-btn" id="clearPicked">清空</button>
+  </div>
+
+  <main class="scroll" id="ingList"></main>
+
+  <div class="bottom-cta">
+    <button class="primary-btn" id="goCook">
+      <span>看看能做什么</span>
+      <span class="arrow">→</span>
+    </button>
+  </div>
+</section>
+
+<!-- ========== 第二页：能做什么 ========== -->
+<section class="screen" id="screen-cook">
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-emoji">🍲</span>
+      <div>
+        <h1 id="cookTitle">能做 0 道菜</h1>
+        <p class="sub" id="cookSub">按食材匹配度排序</p>
+      </div>
+    </div>
+    <button class="round-btn" id="randomBtn" title="随便来一道">🎲</button>
+  </header>
+
+  <div class="filter-row" id="filterRow">
+    <button class="chip-tab active" data-filter="ready">现在能做</button>
+    <button class="chip-tab" data-filter="near">差一点点</button>
+    <button class="chip-tab" data-filter="all">全部菜谱</button>
+  </div>
+
+  <main class="scroll" id="recipeList"></main>
+</section>
+
+<!-- ========== 第三页：收藏 ========== -->
+<section class="screen" id="screen-fav">
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-emoji">⭐</span>
+      <div>
+        <h1>我的收藏</h1>
+        <p class="sub">喜欢的菜都在这儿，点开就能做</p>
+      </div>
+    </div>
+  </header>
+  <main class="scroll" id="favList"></main>
+</section>
+
+<!-- ========== 底部导航 ========== -->
+<nav class="tabbar">
+  <button class="tab active" data-tab="pick"><span class="t-ico">🧺</span><span>我的食材</span></button>
+  <button class="tab" data-tab="cook"><span class="t-ico">🍳</span><span>做点啥</span></button>
+  <button class="tab" data-tab="fav"><span class="t-ico">⭐</span><span>收藏</span></button>
+</nav>
+
+<!-- ========== 菜谱详情 ========== -->
+<div class="detail-page" id="detailPage">
+  <div class="detail-scroll" id="detailScroll"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
